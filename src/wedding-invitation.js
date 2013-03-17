@@ -1,25 +1,23 @@
 /**
- * The program that changed my life ;)
- *
- * @author: Sudar Muthu (http://sudarmuthu.com/wedding)
+ * The program that changed our life ;)
  */
 
 (function () {
 
-	var Sudar = new Person("Sudar"),
-		Archana = new Person("Archana");
+	var Eko = new Person("Eko"),
+		  Rina = new Person("Rina");
 
-	isResponsible(Sudar); 
+	isResponsible(Eko); 
 
 	gettingMarried({
-		boy: Sudar, 
-		girl: Archana,
-		in: "YMCA Youth Center, 6/47, Ritherdon Road, Vepery, Chennai - 74",
-		on: "February 6th, 2012",
-		at: "9:00 AM - 10:30 AM. Reception: 6:00 PM - 9:00 PM"
+		man: Eko, 
+		woman: Rina,
+		in: "Gedung Serbaguna PLN Duren Tiga, Jl. Duren Tiga 102, Jakarta Selatan",
+		on: "Sunday, April 7th, 2013",
+		at: "11:00 - 13:00"
 	});
 
-	isResponsible(Sudar);
+	isResponsible(Eko);
 
 	// Person Class
 	function Person(name) {
@@ -30,10 +28,10 @@
 
 	// The grant process
 	function gettingMarried(args) {
-		args.boy.responsibility = "all";
-		args.boy.status = args.girl.status = "committed";
+		args.man.responsibility = "all";
+		args.man.status = args.woman.status = "committed";
    	    	
-		console.log("Expecting you with your family in " + args.in + 
+		console.log("Expecting you to attend our wedding reception in " + args.in + 
 				    " on " + args.on + 
 				    " at " + args.at
 				   );
@@ -42,7 +40,7 @@
 	// Check if the person is responsible
 	function isResponsible(person) {
 		return ((person.status === "single" || 
-				 person.name === "Sudar") ? false : true);
+				 person.name === "Eko") ? false : true);
 	}
 	
 }());
